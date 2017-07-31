@@ -1,19 +1,52 @@
-const {resolve} = require('path');
-
+const path = require('path');
+const webpack  = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports =  {
-        context : resolve('src'),
+        cache: true,
         entry : {
-            app: './app.js'
+            app: './src/main',
+            polyfills: './src/polyfills',
+            vendor:  './src/vendor',
         },
         output : {
-            path : resolve('dist'), 
-            filename : 'bundle.[name].js'
+            path : path.join(__dirname,'dist'), 
+            filename : 'bundle.[name].js',
+            sourceMapFilename: '[name].map',
+            chunkFilename: '[id].chunk.js'
         },
-        plugins : [
-            new HtmlWebpackPlugin({
+        devtool : 'source-map',
+        module: {
+            loaders : [
+                { test: /\.ts$/,   loader: 'awesome-typescript-loader' },
+                { test: /\.json$/, loader: 'json-loader' },
+                { test: /\.html/,  loader: 'raw-loader' },
+                { test: /\.css$/,  loader: 'to-string-loader!css-loader' },                
+            ]
+        },
+
+        resolve: {
+            extensions: [ '.ts', '.js', '.json']
+        },
+        plugins: [
+            new webpack.optimize.CommonsChunkPlugin({ name: ['polyfills', 'vendor', 'main'].reverse(), minChunks: Infinity }),
+             new HtmlWebpackPlugin({
                 title : 'Bundle'
             })
-        ]
+        ],
+        devServer: {
+            historyApiFallback: true,
+            watchOptions: { aggregateTimeout: 300, poll: 1000 }
+        },
+        node: {
+            global: true,
+            process: true,
+            Buffer: false,
+            crypto: 'empty',
+            module: false,
+            clearImmediate: false,
+            setImmediate: false,
+            clearTimeout: true,
+            setTimeout: true
+        }
     };

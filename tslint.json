@@ -1,0 +1,14 @@
+{
+    "className" : true,
+    "comment-format" : [true,"check-space"],
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended"
+    ],
+    "jsRules": {},
+    "rules": {},
+    "rulesDirectory": [],
+    "quotemark" : [true],
+    "semicolon" : false,
+    "object-literal-sort-keys": false,
+}
