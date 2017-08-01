@@ -1,17 +1,17 @@
-import { NgModule } from '@angular/core'
-import { BrowserModule } from '@angular/platform-browser'
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic'
-import { App } from './app';
-import { Main } from './app/containers';
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
+import { App } from "./app";
+import { Main } from "./app/containers";
 @NgModule({
+    bootstrap: [ App ],
     declarations: [
         App,
-        Main
+        Main,
     ],
     imports : [
-        BrowserModule
+        BrowserModule,
     ],
-    bootstrap: [ App ]
 })
 
 export class AppModule {}

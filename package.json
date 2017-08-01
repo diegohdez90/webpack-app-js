@@ -4,29 +4,26 @@
   "description": "",
   "scripts": {
     "build": "webpack",
-    "dev": "webpack-dev-server"
+    "dev": "webpack-dev-server --inline --colors  --content-base src"
   },
   "author": "Diego Arturo Hernandez Fuentes",
   "license": "ISC",
   "devDependencies": {
-    "@angular/common": "^2.0.0",
-    "@angular/compiler": "^2.0.0",
-    "@angular/core": "^2.0.0",
-    "@angular/forms": "^2.0.0",
-    "@angular/http": "^2.0.0",
-    "@angular/platform-browser": "^2.0.0",
-    "@angular/platform-browser-dynamic": "^2.0.0",
-    "@angular/router": "^3.0.0",
     "@types/core-js": "^0.9.42",
     "@types/lodash": "^4.14.71",
     "@types/node": "^8.0.17",
     "awesome-typescript-loader": "^3.2.2",
     "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2016": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
     "css-loader": "^0.28.4",
     "html-webpack-plugin": "^2.29.0",
     "raw-loader": "^0.5.1",
     "to-string-loader": "^1.1.5",
     "tslint": "^5.5.0",
+    "tslint-loader": "^3.5.3",
     "typescript": "^2.4.2",
     "update": "^0.7.4",
     "webpack": "^3.4.1",
@@ -34,10 +31,18 @@
     "webpack-dev-server": "^2.6.1"
   },
   "dependencies": {
+    "@angular/common": "~4.1.3",
+    "@angular/compiler": "~4.1.3",
+    "@angular/core": "~4.1.3",
+    "@angular/forms": "~4.1.3",
+    "@angular/http": "~4.1.3",
+    "@angular/platform-browser": "~4.1.3",
+    "@angular/platform-browser-dynamic": "~4.1.3",
+    "@angular/router": "^4.1.3",
     "core-js": "^2.4.1",
     "eslint": "^4.3.0",
     "lodash": "^4.17.4",
     "rxjs": "^5.4.2",
-    "zone.js": "^0.8.16"
+    "zone.js": "^0.8.4"
   }
 }

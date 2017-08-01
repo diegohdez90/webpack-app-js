@@ -10,5 +10,5 @@
     "rulesDirectory": [],
     "quotemark" : [true],
     "semicolon" : false,
-    "object-literal-sort-keys": false,
+    "object-literal-sort-keys": false
 }

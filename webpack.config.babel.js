@@ -22,15 +22,21 @@ module.exports =  {
                 { test: /\.json$/, loader: 'json-loader' },
                 { test: /\.html/,  loader: 'raw-loader' },
                 { test: /\.css$/,  loader: 'to-string-loader!css-loader' },                
+                {
+                    test : /\.js$/,
+                    exclude : [path.resolve(__dirname,'node_modules')],
+                    loader : 'babel-loader'
+                }
             ]
         },
 
         resolve: {
-            extensions: [ '.ts', '.js', '.json']
+            extensions: ['.ts', '.js', '.json']
         },
         plugins: [
             new webpack.optimize.CommonsChunkPlugin({ name: ['polyfills', 'vendor', 'main'].reverse(), minChunks: Infinity }),
              new HtmlWebpackPlugin({
+                 template: 'dist/index.html',
                 title : 'Bundle'
             })
         ],
