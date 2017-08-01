@@ -36,7 +36,7 @@ module.exports =  {
         plugins: [
             new webpack.optimize.CommonsChunkPlugin({ name: ['polyfills', 'vendor', 'main'].reverse(), minChunks: Infinity }),
              new HtmlWebpackPlugin({
-                 template: 'dist/index.html',
+                 template: 'src/index.html',
                 title : 'Bundle'
             })
         ],
