@@ -7,7 +7,7 @@
     ],
     "jsRules": {},
     "rules": {},
-    "rulesDirectory": [],
+    "rulesDirectory": ["single"],
     "quotemark" : [true],
     "semicolon" : false,
     "object-literal-sort-keys": false

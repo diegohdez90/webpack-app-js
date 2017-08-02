@@ -1,11 +1,12 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
 @Component({
-    selector : "main-container",
+    selector : 'main-container',
     template : `
         <div>
-            <main class="main">
-                Content here
+            <nav></nav>
+            <main class='main'>
+                Content
             </main>
         </div>
     `,
