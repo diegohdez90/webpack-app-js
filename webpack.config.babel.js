@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack  = require('webpack');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports =  {
@@ -21,23 +22,36 @@ module.exports =  {
                 { test: /\.ts$/,   loader: 'awesome-typescript-loader' },
                 { test: /\.json$/, loader: 'json-loader' },
                 { test: /\.html/,  loader: 'raw-loader' },
-                { test: /\.css$/,  loader: 'to-string-loader!css-loader' },                
+                { test: /\.css$/,  loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use:['css-loader']})
+                },
                 {
                     test : /\.js$/,
-                    exclude : [path.resolve(__dirname,'node_modules')],
+                    exclude : [path.resolve(__dirname,'./node_modules')],
                     loader : 'babel-loader'
-                }
+                },
+                {
+                    test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+                    exclude: /node_modules/,
+                    use: [{
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[hash].[ext]',
+                        },
+                    }],
+                    include: path.resolve(__dirname, 'src', 'fonts'), }
             ]
         },
 
         resolve: {
-            extensions: ['.ts', '.js', '.json']
+            extensions: ['.ts', '.js', '.json', 'css']
         },
         plugins: [
             new webpack.optimize.CommonsChunkPlugin({ name: ['polyfills', 'vendor', 'main'].reverse(), minChunks: Infinity }),
-             new HtmlWebpackPlugin({
+            new ExtractTextPlugin('styles.[name].[chunkhash].css', 'styles.[name].css'),
+            new HtmlWebpackPlugin({
                  template: 'src/index.html',
-                title : 'Bundle'
+                title : 'Bundle',
+                inject: 'head',
             })
         ],
         devServer: {

@@ -5,6 +5,9 @@ import { App } from './app';
 import { Main } from './app/containers';
 import { Navbar } from './app/ui';
 
+import "./reset.css";
+import "./style.css";
+
 @NgModule({
     bootstrap: [ App ],
     declarations: [
