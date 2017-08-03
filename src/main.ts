@@ -3,8 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { App } from './app';
 import { Main } from './app/containers';
-import { Navbar } from './app/ui';
+import { Navbar, Task } from './app/ui';
 
+import "../node_modules/normalize-css/normalize.css";
+import "./assets/css/bootstrap.min.css";
 import "./reset.css";
 import "./style.css";
 
@@ -14,6 +16,7 @@ import "./style.css";
         App,
         Main,
         Navbar,
+        Task
     ],
     imports : [
         BrowserModule,

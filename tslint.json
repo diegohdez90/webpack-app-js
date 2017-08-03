@@ -60,5 +60,9 @@
     "rulesDirectory": [],
     "quotemark" : [true,"single"],
     "semicolon" : false,
-    "object-literal-sort-keys": false
+    "object-literal-sort-keys": false,
+    "ordered-imports" : {
+        "import-sources-order" : "any",
+        "named-imports-order" : "any"
+    }
 }
