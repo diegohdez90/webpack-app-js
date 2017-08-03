@@ -5,6 +5,19 @@
 .navbar-brand-logo{
     width: 50%;
 }
+
 .img-header{
     width: 100%;
+}
+
+ul.navbar-nav li.nav-item a.nav-link{
+    color: #fff;
+}
+
+ul.navbar-nav li.nav-item a.nav-link:hover{
+    color: #ccc;
+}
+
+.navbar i[class^="fa"]{
+    color: #fff;
 }

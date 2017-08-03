@@ -17,13 +17,13 @@ export class Tasks {
         "name": "Connect with Github your application",
         "description" : "Connect this application with github to share your job and clone it in other devices to still " +
         "working without losing your advances",
-        "img" : ""
+        "img" : "./assets/img/Octocat.png"
     },
     {
         "name" : "Config your Tslint",
         "description": "Add this configuration to analize your Typescript code throught some rules to check errors and " +
         "functionality.",
-        "img" : ""
+        "img" : "./assets/img/ts.png"
     }];
 
 }
