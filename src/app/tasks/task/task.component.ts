@@ -2,11 +2,11 @@ import { Component, Input } from '@angular/core';
 
 @Component({
     selector : 'task',
-    templateUrl : './app/templates/task.html',
-    styleUrls  : ['./app/templates/css/task.css']
+    templateUrl : './app/tasks/task/task.component.html',
+    styleUrls  : ['./app/tasks/task/task.component.css']
 })
 
-export class Task  {
+export class TaskComponent  {
     @Input() task = {};
 
     constructor() {

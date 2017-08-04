@@ -1,17 +1,19 @@
 import { RouterModule } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
-import { Tasks, About, Contact } from "./containers";
+import { TasksComponent } from "./tasks/tasks.component";
+import { AboutComponent } from './about/about.component'
+import { ContactComponent } from './contact/contact.component'
 
 export const routes: ModuleWithProviders = RouterModule.forRoot([
     {
         path : '',
-        component : Tasks
+        component : TasksComponent
     },
     {
-        path : 'about', component : About
+        path : 'about', component : AboutComponent
     },
     {
-        path : 'contact', component : Contact
+        path : 'contact', component : ContactComponent
     },
     {
         path : '**',

@@ -2,11 +2,11 @@ import {Component} from '@angular/core';
 
 @Component({
     selector : 'tasks',
-    templateUrl : './app/templates/tasks.html',
-    styleUrls : ['./app/templates/css/tasks.css']
+    templateUrl : './app/tasks/tasks.component.html',
+    styleUrls : ['./app/tasks/tasks.component.css']
 })
 
-export class Tasks {
+export class TasksComponent {
 
     tasks = [{
         "name": "Programming",
