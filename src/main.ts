@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { App } from './app';
-import { Main, Tasks } from './app/containers';
+import { App, routes } from './app';
+import { Main, Tasks, About, Contact } from './app/containers';
 import { Navbar, Task } from './app/ui';
 
 import "./reset.css";
@@ -17,10 +17,13 @@ import "./style.css";
         Main,
         Navbar,
         Tasks,
-        Task
+        Task,
+        About,
+        Contact
     ],
     imports : [
         BrowserModule,
+        routes
     ],
 })
 
