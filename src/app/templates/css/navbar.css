@@ -18,6 +18,10 @@ ul.navbar-nav li.nav-item a.nav-link:hover{
     color: #ccc;
 }
 
+.social-links{
+    width:20%;
+}
+
 .navbar i[class^="fa"]{
     color: #fff;
 }

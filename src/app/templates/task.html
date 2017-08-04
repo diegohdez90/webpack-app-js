@@ -1,11 +1,12 @@
 
-
-<div class="picture">
-    <picture *ngIf="task.img">
-        <img class="task-image" [src]="task.img">
-    </picture>
-</div>
-<h3>{{ task.name }}</h3>
-<div class="text">
-    {{ task.description }}
-</div>
+<diV class="box-task">
+    <div class="picture">
+        <picture *ngIf="task.img">
+            <img class="task-image" [src]="task.img">
+        </picture>
+    </div>
+    <h3>{{ task.name }}</h3>
+    <div class="text">
+        {{ task.description }}
+    </div>
+</diV>

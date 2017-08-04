@@ -1,4 +1,10 @@
 <div class="row">
-    <task class="col-xs-4 col-md-4 col-lg-4" *ngFor="let t of tasks" [task]="t"
-    ></task>
+    <div class="col-12">
+        <h2 class="h2 task-header">ES6 Angular Developer Task</h2>
+    </div>
+    <task 
+        class="col-xs-4 col-md-4 col-lg-4" 
+        *ngFor="let t of tasks" 
+        [task]="t"
+        ></task>
 </div>

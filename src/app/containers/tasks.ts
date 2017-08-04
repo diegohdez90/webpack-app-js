@@ -2,7 +2,8 @@ import {Component} from '@angular/core';
 
 @Component({
     selector : 'tasks',
-    templateUrl : './app/templates/tasks.html'
+    templateUrl : './app/templates/tasks.html',
+    styleUrls : ['./app/templates/css/tasks.css']
 })
 
 export class Tasks {
