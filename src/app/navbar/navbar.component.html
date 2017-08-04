@@ -3,21 +3,21 @@
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand navbar-brand-logo" href="#"><img class="img-header" src="./assets/img/logo-on-white-bg.png" ></a>
+        <a class="navbar-brand navbar-brand-logo" [routerLink]="['']"><img class="img-header" src="./assets/img/logo-on-white-bg.png" ></a>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="#">Home </a>
+                <a class="nav-link" [routerLink]="['']">Home </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">About </a>
+                <a class="nav-link" [routerLink]="['','about']">About </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Projects </a>
+                <a class="nav-link" [routerLink]="['']">Projects </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Contact </a>
+                <a class="nav-link" [routerLink]="['','contact']">Contact </a>
             </li>
         </ul>
 
