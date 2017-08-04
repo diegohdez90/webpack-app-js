@@ -7,6 +7,8 @@ import { TasksComponent } from './tasks/tasks.component';
 import { TaskComponent } from "./tasks/task/task.component";
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { CoursesComponent } from './courses/courses.component'
+import { CourseComponent } from './courses/course/course.component'
 
 import { AppRoutingModule } from './app-routing.module'
 
@@ -18,7 +20,9 @@ import { AppRoutingModule } from './app-routing.module'
         TasksComponent,
         TaskComponent,
         AboutComponent,
-        ContactComponent
+        ContactComponent,
+        CourseComponent,
+        CoursesComponent
     ],
     imports : [
         BrowserModule,
